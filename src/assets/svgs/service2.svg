@@ -1,6 +1,10 @@
 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M34 44V25H14V44" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M22 39H26" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M41 16.8999V43.9999H7V16.8999" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M45.6875 20.525L24 3.75L2.3125 20.525" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+    <!-- Shield -->
+    <path d="M24 44C24 44 40 36 40 24V12L24 4L8 12V24C8 36 24 44 24 44Z" stroke="#1a1a1a" stroke-width="2" stroke-miterlimit="10"/>
+    <!-- Document -->
+    <path d="M18 16H30" stroke="#1a1a1a" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M18 22H30" stroke="#1a1a1a" stroke-width="2" stroke-miterlimit="10"/>
+    <path d="M18 28H24" stroke="#1a1a1a" stroke-width="2" stroke-miterlimit="10"/>
+    <!-- Check Mark -->
+    <path d="M28 32L30 34L34 28" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
