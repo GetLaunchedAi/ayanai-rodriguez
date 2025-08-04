@@ -1,14 +1,14 @@
 ---
-layout: 'base.html'
-description: "Meta description for the page"
-metaTitle: 'Title that shows up on google searches'
-tagTitle: 'About'
-preloadImg: '/images/cabinets2-1920w.webp'
-preloadCSS: '/css/about.css'
-permalink: 'about/'
+layout: "base.html"
+description: "Expert tax preparation services with 7+ years experience in maximizing refunds and ensuring IRS compliance. Virtual services available nationwide."
+metaTitle: "About Us | Ayanai R. Rodriguez Tax Services"
+tagTitle: "About Us"
+preloadImg: "/images/skyscraper.jpg"
+preloadCSS: "/css/about.css"
+permalink: "about/"
 eleventyNavigation:
-    key: About Us
-    order: 200
+  key: About Us
+  order: 200
 ---
 
 <!-- Enter html code below -->
@@ -19,7 +19,8 @@ eleventyNavigation:
 
 <section id="int-hero">
   <h1 id="home-h">About Us</h1>
-  {% image './src/images/cabinets2.jpg', 'cabinets', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
+  {% image './src/images/landing_5.png', 'professional tax services office', '',
+  'lazy', '(max-width: 850px) 850px, 1920px'%}
 </section>
 
 <!-- ============================================ -->
@@ -30,28 +31,49 @@ eleventyNavigation:
   <div class="cs-container">
     <!-- Left Image Section -->
     <div class="cs-left">
-      {% image './src/images/cabinets2.jpg', 'cabinets', 'cs-picture cs-picture1', 'lazy'%}
-      {% image './src/images/construction.jpg', 'house', 'cs-picture cs-picture2', 'lazy'%}
+      {% image './src/images/landing_3.png', 'tax preparation services',
+      'cs-picture cs-picture1', 'lazy'%} {% image './src/images/ceo_tax.png',
+      'virtual tax consultation', 'cs-picture cs-picture2', 'lazy'%}
     </div>
     <!-- Right Content Section-->
     <div class="cs-right">
-      <span class="cs-topper">About Us</span>
-      <h2 class="cs-title">About Company Title</h2>
+      <span class="cs-topper">Our Expertise</span>
+      <h2 class="cs-title">Trusted Tax Services</h2>
       <p class="cs-text">
-                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-            </p>
+        With over 7 years of dedicated experience in tax preparation, we've
+        built our reputation on providing accurate, secure, and personalized tax
+        services that put our clients' needs first. Our commitment to excellence
+        has helped countless individuals and businesses maximize their refunds
+        while maintaining full IRS compliance.
+      </p>
       <p class="cs-text">
-                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-            </p>
+        We leverage advanced tax preparation software and secure filing systems
+        to ensure your sensitive financial information is protected throughout
+        the entire process. Our virtual service model allows us to serve clients
+        nationwide while providing the same level of personalized attention
+        you'd expect from an in-person consultation.
+      </p>
       <div class="cs-flex-group">
         <p class="cs-flex-p">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                </p>
-        <span class="cs-name">Justin Time</span>
-        <span class="cs-job">CEO-Founder</span>
-        <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
+          "My mission is to make tax preparation stress-free while ensuring
+          every client receives the maximum refund they're legally entitled to.
+          Your financial success is my priority."
+        </p>
+        <span class="cs-name">Ayanai R. Rodriguez</span>
+        <span class="cs-job">Certified Tax Preparer</span>
+        <img
+          class="cs-quote-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
+          alt="quote"
+          width="136"
+          height="77"
+        />
       </div>
-      <a href="" class="button-solid">More About Us</a>
+      <a href="/contact" class="button-solid"
+        >Consult with us</a
+      >
     </div>
   </div>
 </section>
@@ -62,11 +84,15 @@ eleventyNavigation:
 
 <section id="cta">
   <div class="container">
-    <h2 class="title">Get It Done <br> With Us Today</h2>
+    <h2 class="title">Get Started Today</h2>
     <p>
-            Say something catchy, informative, and encouraging to click the button to go to the contact page.  I like to add these to the bottom of all pages.
-        </p>
-    <a href="/contact.html" class="button-solid">Free Estimate</a>
+      Take the first step toward maximizing your tax refund while ensuring
+      complete IRS compliance. Our virtual tax preparation services make it easy
+      to file from anywhere in the United States.
+    </p>
+    <a href="/contact" class="button-solid">Book Your Free Consultation »</a>
   </div>
-  {% image './src/images/cabinets2.jpg', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920'%}
+  {% image './src/images/landing_6.png', 'professional tax preparation
+  services', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px,
+  1920'%}
 </section>

@@ -1,14 +1,14 @@
 ---
-layout: 'base.html'
-description: 'Meta description for the page'
-metaTitle: 'Title that shows up on google searches'
-tagTitle: 'Contact'
-preloadImg: '/images/cabinets2-1920w.webp'
-preloadCSS: '/css/contact.css'
-permalink: 'contact/'
+layout: "base.html"
+description: "Book your free tax consultation with certified preparer Ayanai R. Rodriguez. Get expert guidance on maximizing your tax returns safely and efficiently."
+metaTitle: "Book a Tax Consultation | Ayanai R. Rodriguez Tax Services"
+tagTitle: "Book a Consultation"
+preloadImg: "/images/skyscraper.jpg"
+preloadCSS: "/css/contact.css"
+permalink: "contact/"
 eleventyNavigation:
-    key: Contact
-    order: 600
+  key: Contact
+  order: 600
 ---
 
 <!-- Enter html code below -->
@@ -18,8 +18,9 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="int-hero">
-  <h1 id="home-h">Contact Us</h1>
-  {% image './src/images/cabinets2.jpg', 'cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+  <h1 id="home-h">Book a Consultation</h1>
+  {% image './src/images/landing_5.png', 'professional tax consultation office',
+  '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
 </section>
 
 <!-- ============================================ -->
@@ -28,49 +29,95 @@ eleventyNavigation:
 
 <section id="cs-contact">
   <div class="cs-container">
-    <form id="cs-form" name="Contact Form" method="post">
+    <form id="cs-form" name="Tax Consultation Request" method="post">
       <div class="cs-content">
-        <span class="cs-topper">Contact</span>
-        <h2 class="cs-title">Get in Touch</h2>
+        <span class="cs-topper">Free Tax Review</span>
+        <h2 class="cs-title">Let's Talk Taxes</h2>
         <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                </p>
+          Get expert tax guidance from Ayanai R. Rodriguez, a certified preparer
+          with 7+ years of experience maximizing returns for individuals and
+          businesses.
+        </p>
       </div>
       <label>
-                Name
-                <input required type="text" id="name" name="name" placeholder="Name">
+        Full Name
+        <input
+          required
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your full name"
+        />
       </label>
       <label>
-                Email
-                <input required type="text" id="email" name="email" placeholder="Email">
+        Email Address
+        <input
+          required
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email address"
+        />
       </label>
       <label>
-                Phone
-                <input required type="text" id="phone" name="phone" placeholder="Phone">
+        Phone Number
+        <input
+          required
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Your phone number"
+        />
       </label>
       <label>
-                How Did You Find Us
-                <input type="text" id="find" name="find-us" placeholder="How did you find us?">
+        Tax Service Needed
+        <input
+          required
+          type="text"
+          id="service"
+          name="service"
+          list="tax-services"
+          placeholder="Select a service"
+        />
+        <datalist id="tax-services">
+          <option value="Personal Tax Preparation"></option>
+          <option value="Business Tax Preparation"></option>
+          <option value="Tax Planning"></option>
+          <option value="Audit Support"></option>
+        </datalist>
       </label>
       <label class="cs-label-message">
-                Message
-                <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
+        Additional Information
+        <textarea
+          required
+          name="Message"
+          id="message"
+          placeholder="Tell us about your tax situation and any specific questions you have..."
+        ></textarea>
       </label>
-      <button class="cs-button-solid" type="submit">Submit Message</button>
+      <button class="cs-button-solid" type="submit">
+        Consult with us
+      </button>
     </form>
     <div class="cs-right-section">
       <!--Email-->
       <span class="cs-header">Email</span>
-      <a class="cs-link" href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+      <a class="cs-link" href="mailto:ayanai@yahoo.com">ayanai@yahoo.com</a>
       <!--Phone-->
-      <span class="cs-header">Phone</span>
-      <a class="cs-link" href="tel:219-555-1234">(219) 555-1234</a>
-      <!--Address-->
-      <span class="cs-header">Address</span>
-      <a class="cs-link" href="">2553 Woodbridge Lane, <span class="cs-block">Boston Ware 120</span></a>
+      <span class="cs-header">Virtual Consultations</span>
+      <a class="cs-link" href="tel:+17734190736">(773) 419-0736</a>
+      <!--Hours-->
+      <span class="cs-header">Business Hours</span>
+      <p class="cs-link">
+        Monday - Friday: 9am - 6pm EST<br />
+        Saturday: By Appointment<br />
+        Sunday: Closed
+      </p>
 
       <!-- Background Image-->
-      {% image './src/images/skyscraper.jpg', 'building', '', 'lazy'%}
+      {% image './src/images/ceo_tax.png', 'professional tax preparation
+      services', 'cs-picture cs-contact-image', 'lazy', '(max-width: 400px)
+      400px, 430px'%}
     </div>
   </div>
 </section>
