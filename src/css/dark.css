@@ -4,9 +4,9 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   :root {
-    --dark: #082032;
-    --medium: #2C394B;
-    --accent: #334756;
+    --dark: #1e293b; /* Slate 800 - Main background */
+    --medium: #334155; /* Slate 700 - Card backgrounds */
+    --accent: #94a3b8; /* Slate 400 - Accents and highlights */
   }
   body.dark-mode {
     background-color: var(--dark);
@@ -69,14 +69,14 @@
   }
   #dark-mode-toggle .moon {
     z-index: 2;
-    transition: transform .3s, opacity .3s, fill .3s;
+    transition: transform 0.3s, opacity 0.3s, fill 0.3s;
     fill: #000;
   }
   #dark-mode-toggle .sun {
     z-index: 1;
     transform: translate(-50%, 100%);
     opacity: 0;
-    transition: transform .3s, opacity .3s;
+    transition: transform 0.3s, opacity 0.3s;
   }
 }
 /* Desktop */
