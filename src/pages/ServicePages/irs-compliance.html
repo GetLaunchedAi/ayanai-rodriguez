@@ -16,7 +16,7 @@ eleventyNavigation:
 <!--                   Banner                     -->
 <!-- ============================================ -->
 
-<div id="banner-1401">
+<div id="banner-1402">
   <div class="cs-container">
     <span class="cs-int-title">IRS Compliance Services</span>
     <div class="cs-breadcrumbs" style="font-weight: bold">
@@ -29,12 +29,15 @@ eleventyNavigation:
   'cs-background', 'eager', '(max-width: 600px) 600px, 1280px'%}
 </div>
 
-<section id="content-page-1401">
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<section id="content-page-1402">
   <div class="cs-container">
     <div class="cs-image-group">
       <div class="cs-flex">
         <picture class="cs-background">
-          <!--Mobile Image-->
           {% image './src/images/irs_compliance_1.png', 'IRS compliance and tax
           regulation services', '', 'lazy', '(max-width: 600px) 542px, 728px'%}
         </picture>
@@ -60,7 +63,7 @@ eleventyNavigation:
               loading="lazy"
               decoding="async"
               src="/assets/svgs/check.svg"
-              alt="icon"
+              alt="IRS compliance icon"
               width="32"
               height="32"
             />
@@ -79,7 +82,7 @@ eleventyNavigation:
               loading="lazy"
               decoding="async"
               src="/assets/svgs/check.svg"
-              alt="icon"
+              alt="IRS compliance icon"
               width="32"
               height="32"
             />
@@ -115,23 +118,24 @@ eleventyNavigation:
         <li>Complete documentation support</li>
         <li>Audit risk minimization</li>
       </ol>
-      <h4>Our Compliance Services Include</h4>
-      <ul>
-        <li>Tax regulation review</li>
-        <li>Documentation verification</li>
-        <li>Deduction validation</li>
-        <li>Audit preparation support</li>
-      </ul>
+      <div class="desktop-only">
+        <h4>Our Compliance Services Include</h4>
+        <ul>
+          <li>Tax regulation review</li>
+          <li>Documentation verification</li>
+          <li>Deduction validation</li>
+          <li>Audit preparation support</li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="cs-bubbles" aria-hidden="true"></div>
 </section>
-
 <!-- ============================================ -->
 <!--                Side By Side                  -->
 <!-- ============================================ -->
 
-<section id="sbs-2291">
+<section id="services-563">
   <div class="cs-container">
     <!-- Left Content Section-->
     <div class="cs-content">
@@ -146,9 +150,57 @@ eleventyNavigation:
       <div class="cs-features">
         <h3 class="cs-h3">Compliance Benefits</h3>
         <ul class="cs-ul">
-          <li class="cs-li">Regulatory compliance review</li>
-          <li class="cs-li">Complete documentation support</li>
-          <li class="cs-li">Audit preparation assistance</li>
+          <li class="cs-li">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="cs-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14" />
+              <path d="M13 18l6-6-6-6" />
+            </svg>
+            Regulatory compliance review
+          </li>
+          <li class="cs-li">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="cs-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14" />
+              <path d="M13 18l6-6-6-6" />
+            </svg>
+            Complete documentation support
+          </li>
+          <li class="cs-li">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="cs-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14" />
+              <path d="M13 18l6-6-6-6" />
+            </svg>
+            Audit preparation assistance
+          </li>
         </ul>
       </div>
       <a
@@ -159,21 +211,92 @@ eleventyNavigation:
         >Consult with us »</a
       >
     </div>
-    <!-- Right Image Section -->
     <div class="cs-image-group">
-      <!--Floating Box-->
-      <div class="cs-box">
-        <span class="cs-number">100%</span>
-        <div class="cs-flex">
-          <h3 class="cs-heading">Compliant</h3>
-          <span class="cs-desc"
-            >Full adherence to current IRS regulations and requirements.</span
-          >
-        </div>
-      </div>
-      <!--Image-->
       {% image './src/images/irs_compliance_2.png', 'IRS compliance services',
       'cs-picture', 'lazy', '(max-width: 600px) 630px, 630px'%}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-254">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">FAQ’s</span>
+      <h2 class="cs-title">IRS Compliance FAQs</h2>
+      <p class="cs-text">
+        Quick answers about staying compliant with current IRS rules—from
+        required documentation to audit support.
+      </p>
+    </div>
+    <div class="cs-flex-group">
+      <ul class="cs-faq-group">
+        <!-- Active class added as default -->
+        <li class="cs-faq-item active">
+          <button class="cs-button">
+            What documents do I need for IRS-compliant filing?
+          </button>
+          <p class="cs-item-p">
+            Typical documents include W‑2s/1099s, prior-year return, ID,
+            dependent information, business income/expenses (if applicable), and
+            supporting receipts for deductions/credits. We’ll send a tailored
+            checklist to make it easy.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            How do you keep my return compliant with current IRS rules?
+          </button>
+          <p class="cs-item-p">
+            We use up-to-date IRS publications and e-file software validations,
+            document every position, and verify eligibility for deductions and
+            credits. Returns are reviewed against current-year changes to avoid
+            red flags.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            Can you help if I receive an IRS notice or audit letter?
+          </button>
+          <p class="cs-item-p">
+            Yes. We analyze the notice, prepare responses, gather supporting
+            documents, and represent you through correspondence audits. We’ll
+            outline next steps and timelines to resolve issues quickly.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            How do you determine which deductions are acceptable?
+          </button>
+          <p class="cs-item-p">
+            We apply IRS substantiation rules and current thresholds, confirm
+            business purpose where required, and ensure receipts and records
+            align with your return. Only defensible deductions are included to
+            protect you.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            Do you offer year‑round compliance support?
+          </button>
+          <p class="cs-item-p">
+            Yes. We provide quarterly check-ins, estimated tax guidance for
+            self‑employed clients, recordkeeping tips, and ongoing updates when
+            IRS rules change so you stay compliant all year.
+          </p>
+        </li>
+      </ul>
+      <div class="cs-cta">
+        <h3 class="cs-h3">Don’t see the answer you need?</h3>
+        <p class="cs-cta-p">
+          That’s okay. Just drop us a message and we’ll get back to you as soon
+          as possible.
+        </p>
+        <a href="/contact" class="cs-button-solid">Contact us</a>
+      </div>
     </div>
   </div>
 </section>

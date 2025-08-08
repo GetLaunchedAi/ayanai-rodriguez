@@ -459,6 +459,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 0.75rem;
   }
   #services-1852 .cs-picture1 {
     width: 25.8125em;
