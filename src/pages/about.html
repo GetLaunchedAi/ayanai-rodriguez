@@ -31,9 +31,8 @@ eleventyNavigation:
   <div class="cs-container">
     <!-- Left Image Section -->
     <div class="cs-left">
-      {% image './src/images/landing_5.png', 'tax preparation services',
-      'cs-picture cs-picture1', 'lazy'%} {% image './src/images/ceo_tax.png',
-      'virtual tax consultation', 'cs-picture cs-picture2', 'lazy'%}
+      {% image './src/images/ceo_tax.png', 'virtual tax consultation',
+      'cs-picture cs-picture1', 'lazy'%}
     </div>
     <!-- Right Content Section-->
     <div class="cs-right">
@@ -75,6 +74,147 @@ eleventyNavigation:
     </div>
   </div>
 </section>
+
+<!-- ============================================ -->
+<!--                     FAQ                      -->
+<!-- ============================================ -->
+
+<section id="faq-2286">
+  <div class="cs-container">
+    <div class="cs-image-group">
+      {% image './src/images/tax_preparation_1.png', 'professional tax preparer
+      portrait', 'cs-picture cs-picture1', 'lazy' %} {% image
+      './src/images/hero-tax.png', 'secure online tax filing', 'cs-picture
+      cs-picture2', 'lazy' %} {% image './src/images/tax_preparation_2.png',
+      'working on tax documents', 'cs-picture cs-picture3', 'lazy' %} {% image
+      './src/images/landing_6.png', 'virtual tax preparation services',
+      'cs-picture cs-picture4', 'lazy' %}
+    </div>
+    <div class="cs-content">
+      <span class="cs-topper">FAQ</span>
+      <h2 class="cs-title">Frequently Asked Questions</h2>
+      <ul class="cs-faq-group">
+        <!-- Active class added as default -->
+        <li class="cs-faq-item active">
+          <button class="cs-button">
+            <span class="cs-button-text"
+              >1. What documents do I need to get started?</span
+            >
+            <span class="cs-indicator" aria-hidden="true"></span>
+          </button>
+          <p class="cs-item-p">
+            W‑2s/1099s, prior‑year return, photo ID, dependent info, and any
+            documents for deductions/credits (mortgage interest, tuition, child
+            care, charitable donations). Self‑employed clients should include
+            income and expense records.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text"
+              >2. Do you offer virtual tax preparation?</span
+            >
+            <span class="cs-indicator" aria-hidden="true"></span>
+          </button>
+          <p class="cs-item-p">
+            Yes. We provide a secure client portal for document upload, verified
+            e‑signature, and virtual meetings—so you can file from anywhere
+            without sacrificing security or accuracy.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text"
+              >3. How long does tax preparation take?</span
+            >
+            <span class="cs-indicator" aria-hidden="true"></span>
+          </button>
+          <p class="cs-item-p">
+            Most returns are completed within 2–5 business days after we receive
+            all documents and your approval. We e‑file your return and provide
+            confirmation in your secure portal.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text"
+              >4. How do you maximize my refund while staying
+              IRS‑compliant?</span
+            >
+            <span class="cs-indicator" aria-hidden="true"></span>
+          </button>
+          <p class="cs-item-p">
+            We review every eligible deduction and credit, optimize filing
+            status, and apply current IRS rules. We document positions and only
+            take deductions we can defend.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text"
+              >5. What support do you provide after filing?</span
+            >
+            <span class="cs-indicator" aria-hidden="true"></span>
+          </button>
+          <p class="cs-item-p">
+            We’re available year‑round for amendments, IRS notices, and tax
+            planning questions. Your documents remain securely accessible in the
+            portal.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What documents do I need to get started?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "W-2s/1099s, prior-year return, photo ID, dependent info, and documents for deductions/credits (mortgage interest, tuition, child care, charitable donations). Self-employed clients should include income and expense records."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer virtual tax preparation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We provide a secure client portal for document upload, verified e-signature, and virtual meetings—so you can file from anywhere without sacrificing security or accuracy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does tax preparation take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most returns are completed within 2–5 business days after we receive all documents and your approval. We e-file your return and provide confirmation in your secure portal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you maximize my refund while staying IRS-compliant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We review every eligible deduction and credit, optimize filing status, and apply current IRS rules. We document positions and only take deductions we can defend."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What support do you provide after filing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We’re available year-round for amendments, IRS notices, and tax planning questions. Your documents remain securely accessible in the portal."
+        }
+      }
+    ]
+  }
+</script>
 
 <!-- ============================================ -->
 <!--             Final Call to Action             -->
