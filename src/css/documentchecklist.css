@@ -72,10 +72,14 @@
   color:#0e2a59;
   font-size: clamp(1.05rem, 1.6vw, 1.15rem);
 }
-.dc-col-title--accent{ color:#b11a1a; } /* red accent like screenshot */
+.dc-col-title--accent{ 
+    color:#b11a1a; 
+    font-size: clamp(1.5rem, 1.6vw, 1.75rem);
+
+} /* red accent like screenshot */
 .dc-section-sub{
   margin: 1.25rem 0 .75rem;
-  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  font-size: clamp(1.5rem, 1.6vw, 1.75rem);
   color:#0e2a59;
   text-align:center;
 }
