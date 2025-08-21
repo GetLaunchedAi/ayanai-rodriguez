@@ -14,8 +14,8 @@
         <!--Logo - Get SVGs if you can.  I use fiverr to get png's turned into SVGs. Highly recommend it, worth the $20 - get a light and dark version-->
         <a class="logo" aria-label="Ayanai R. Tax Services - Return to Homepage" href="/">
             <!--Light Colored Logo-->
-            <img class="light" src="/assets/images/logo_white.png" decoding="async" alt="Ayanai R. Tax Services Logo - Light Version"
-                width="221" height="66">
+            <img class="light" src="/assets/images/logo_white.png" decoding="async"
+                alt="Ayanai R. Tax Services Logo - Light Version" width="221" height="66">
 
             <!--Dark Colored Logo-->
             <img class="dark" src="/assets/images/logo_dark.png" decoding="async" loading="lazy"
@@ -35,7 +35,7 @@
             <ul>
                 {%- for entry in navPages if entry.title != ' Navigation Name ' %}
 
-                <li class="{% if entry.title == 'Services' %}dropdown{% endif %}">
+                <li class="{% if entry.title == 'Services' %}dropdown{% elif entry.title == 'Additional Resources' %}dropdown2{% endif %}">
                     {% if entry.title == 'Services' %}
                     <a class="dropdown-toggle" role="button" tabindex="0">
                         {{ entry.title }}
@@ -44,6 +44,15 @@
                         <li><a href="/services/tax-preparation/" style="color:black">Tax Preparation</a></li>
                         <li><a href="/services/secure-filing/" style="color:black">Secure Filing</a></li>
                         <li><a href="/services/irs-compliance/" style="color:black">IRS Compliance</a></li>
+                    </ul>
+
+                    {% elif entry.title == 'Additional Resources' %}
+                    <a class="dropdown-toggle2" role="button" tabindex="0">
+                        {{ entry.title }}
+                    </a>
+                    <ul class="dropdown-menu2">
+                        <li><a href="/resources/document-checklist/" style="color:black">Document Checklist</a></li>
+                        <li><a href="/resources/state-refund-status/" style="color:black">State Refund Links</a></li>
                     </ul>
                     {% else %}
                     <a {% if entry.url==page.url %} class="active" {% endif %} href="{{ entry.url }}">
@@ -68,22 +77,29 @@
                 height="15">
         </button>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const toggles = document.querySelectorAll(".dropdown-toggle");
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Handle both dropdown types
+    const toggles = document.querySelectorAll(".dropdown-toggle, .dropdown-toggle2");
 
-            toggles.forEach((toggle) => {
-                toggle.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const parent = this.closest(".dropdown");
-                    parent.classList.toggle("open");
+    toggles.forEach((toggle) => {
+        toggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            // Determine parent class based on toggle type
+            let parent;
+            if (this.classList.contains("dropdown-toggle2")) {
+                parent = this.closest(".dropdown2");
+            } else {
+                parent = this.closest(".dropdown");
+            }
+            parent.classList.toggle("open");
 
-                    // Optional: collapse other open dropdowns
-                    document.querySelectorAll(".dropdown").forEach((item) => {
-                        if (item !== parent) item.classList.remove("open");
-                    });
-                });
+            // Collapse other open dropdowns of the same type
+            document.querySelectorAll(parent.classList.contains("dropdown2") ? ".dropdown2" : ".dropdown").forEach((item) => {
+                if (item !== parent) item.classList.remove("open");
             });
         });
-    </script>
+    });
+});
+</script>
 </div>

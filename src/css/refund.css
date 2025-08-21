@@ -147,4 +147,12 @@
   line-height: 1.8;
 }
 .states-grid a:hover { text-decoration: underline; }
-                                
+
+body.dark-mode .state-links { 
+    background: var(--dark);
+    color:white
+ }
+
+ body.dark-mode .states-grid a {
+    color: #4ea1ff;
+ }

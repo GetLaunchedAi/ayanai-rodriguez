@@ -631,6 +631,85 @@ nav ul li.dropdown.open .dropdown-menu {
 .dropdown-menu a:hover {
   text-decoration: underline;
 }
+
+
+/* --------------------------
+   Dropdown Container For Additonal Resources
+-------------------------- */
+nav ul li.dropdown2 {
+  position: relative;
+  z-index: 10;
+}
+
+/* --------------------------
+   Dropdown Menu Base Styles
+-------------------------- */
+nav ul li .dropdown-menu2 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background-color: white;
+  padding: 0.5rem 1rem;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform-origin: top;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+/* --------------------------
+   Hover Behavior (Desktop)
+-------------------------- */
+@media (min-width: 729px) {
+  nav ul li.dropdown2:hover .dropdown-menu2 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* --------------------------
+   Open Class Behavior (JS)
+-------------------------- */
+nav ul li.dropdown2.open .dropdown-menu2 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --------------------------
+   Prevent Overflow Clipping
+-------------------------- */
+#navbar-menu,
+#navbar-menu ul,
+#navigation {
+  overflow: visible;
+}
+
+/* --------------------------
+   Dropdown Links
+-------------------------- */
+.dropdown-menu2 li {
+  margin: 1rem 2rem;
+}
+
+.dropdown-menu2 a {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu2 a:hover {
+  text-decoration: underline;
+}
 /*-- -------------------------- -->
 <---   Interior Page Header     -->
 <--- -------------------------- -*/
