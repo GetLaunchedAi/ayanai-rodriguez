@@ -1,14 +1,15 @@
 ---
 layout: "base.html"
-description: "Book your free tax consultation with certified preparer Ayanai R. Rodriguez. Get expert guidance on maximizing your tax returns safely and efficiently."
+description: "Book your free tax consultation with certified preparer Ayanai R. Rodriguez. Get expert guidance on
+maximizing your tax returns safely and efficiently."
 metaTitle: "Book a Tax Consultation | Ayanai R. Rodriguez Tax Services"
 tagTitle: "Book a Consultation"
 preloadImg: "/images/skyscraper.jpg"
 preloadCSS: "/css/contact.css"
 permalink: "contact/"
 eleventyNavigation:
-  key: Contact
-  order: 400
+key: Contact
+order: 400
 ---
 
 <!-- Enter html code below -->
@@ -41,44 +42,24 @@ eleventyNavigation:
       </div>
       <label>
         Full Name
-        <input
-          required
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your full name"
-        />
+        <input required type="text" id="name" name="name" placeholder="Your full name" />
       </label>
       <label>
         Email Address
-        <input
-          required
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Your email address"
-        />
+        <input required type="email" id="email" name="email" placeholder="Your email address" />
       </label>
       <label>
         Phone Number
-        <input
-          required
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Your phone number"
-        />
+        <input required type="tel" id="phone" name="phone" placeholder="Your phone number" />
+      </label>
+      <label>
+        Zip Code
+        <input required type="text" id="zipcode" name="zipcode" pattern="\d{5}" maxlength="5" inputmode="numeric"
+          placeholder="Your zip code" />
       </label>
       <label>
         Tax Service Needed
-        <input
-          required
-          type="text"
-          id="service"
-          name="service"
-          list="tax-services"
-          placeholder="Select a service"
-        />
+        <input required type="text" id="service" name="service" list="tax-services" placeholder="Select a service" />
         <datalist id="tax-services">
           <option value="Personal Tax Preparation"></option>
           <option value="Business Tax Preparation"></option>
@@ -88,23 +69,15 @@ eleventyNavigation:
       </label>
       <label class="cs-label-message">
         Additional Information
-        <textarea
-          required
-          name="Message"
-          id="message"
-          placeholder="Tell us about your tax situation and any specific questions you have..."
-        ></textarea>
+        <textarea required name="Message" id="message"
+          placeholder="Tell us about your tax situation and any specific questions you have..."></textarea>
       </label>
       <button class="cs-button-solid" type="submit">Consult with us</button>
     </form>
     <div class="cs-right-section">
       <!-- Background Image-->
-      <img
-        src="/assets/images/tax_preparation_1.png"
-        alt="professional tax preparation services"
-        class="cs-contact-image"
-        loading="lazy"
-      />
+      <img src="/assets/images/tax_preparation_1.png" alt="professional tax preparation services"
+        class="cs-contact-image" loading="lazy" />
     </div>
   </div>
 </section>
