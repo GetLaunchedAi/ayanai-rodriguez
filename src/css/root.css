@@ -4,11 +4,12 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: #0d9488; /* Teal - fresh, modern, and trustworthy */
-    --primaryShade: #0d948833; /* Teal with transparency for accents */
-    --primaryLight: #e0f7fa; /* Light aqua for backgrounds */
-    --primaryDark: #065f46; /* Deep teal for contrast */
-    --accent: #ffb300; /* Gold accent for energy and highlights */
+    --primary: #1db9e2; /* Teal - matches your logo accent */
+    --primaryShade: #0fa0c7; /* Slightly darker teal for hover/active */
+    --primaryLight: #e0f7fa; /* Very light aqua for backgrounds */
+    --primaryDark: #0d6e82; /* Deep teal for contrast and buttons */
+
+    --accent: #000000; /* Use black as your secondary accent */
     --accentDark: #b28704; /* Deep gold for buttons/hover */
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
@@ -194,13 +195,13 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    height: 1.875rem;
+    height: 2.875rem;
     width: auto;
     text-decoration: none;
   }
   #navigation .logo img {
-    width: 60px;
-    height: auto;
+    width: auto;
+    height: 100%;
   }
   #navigation .logo .light {
     display: none;
@@ -433,8 +434,8 @@
     text-decoration: none;
   }
   #navigation .logo img {
-    width: 60px;
-    height: auto;
+    width: auto;
+    height: 100%;
   }
   #navigation #navbar-menu ul {
     padding: 0;
@@ -631,7 +632,6 @@ nav ul li.dropdown.open .dropdown-menu {
 .dropdown-menu a:hover {
   text-decoration: underline;
 }
-
 
 /* --------------------------
    Dropdown Container For Additonal Resources
