@@ -12,25 +12,29 @@ eleventyNavigation:
   order: 400
 ---
 
-<!-- Enter html code below -->
-
 <!-- ============================================ -->
 <!--                    LANDING                   -->
 <!-- ============================================ -->
-
 <section id="int-hero">
   <h1 id="home-h">Book a Consultation</h1>
-  {% image './src/images/landing_5.png', 'professional tax consultation office',
-  '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+  {% image './src/images/landing_5.png', 'professional tax consultation office', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
 </section>
 
 <!-- ============================================ -->
 <!--                Contact Form                  -->
 <!-- ============================================ -->
-
 <section id="cs-contact">
   <div class="cs-container">
-    <form id="cs-form" name="Tax Consultation Request" method="post">
+    <form id="cs-form" name="Tax Consultation Request" method="POST" action="https://submit-form.com/w0ggNDxb9">
+      <!-- Optional: email subject + identify site -->
+      <input type="hidden" name="_subject" value="New Tax Consultation Request" />
+      <input type="hidden" name="site" value="vtaxconsultants.com" />
+
+      <!-- Honeypot (spam trap) -->
+      <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+        <input type="text" name="_honeypot" tabindex="-1" autocomplete="new-password" inputmode="none" />
+      </div>
+
       <div class="cs-content">
         <span class="cs-topper">Free Tax Review</span>
         <h2 class="cs-title">Let's Talk Taxes</h2>
@@ -40,23 +44,28 @@ eleventyNavigation:
           businesses.
         </p>
       </div>
+
       <label>
         Full Name
         <input required type="text" id="name" name="name" placeholder="Your full name" />
       </label>
+
       <label>
         Email Address
         <input required type="email" id="email" name="email" placeholder="Your email address" />
       </label>
+
       <label>
         Phone Number
         <input required type="tel" id="phone" name="phone" placeholder="Your phone number" />
       </label>
+
       <label>
         Zip Code
         <input required type="text" id="zipcode" name="zipcode" pattern="\d{5}" maxlength="5" inputmode="numeric"
           placeholder="Your zip code" />
       </label>
+
       <label>
         Tax Service Needed
         <input required type="text" id="service" name="service" list="tax-services" placeholder="Select a service" />
@@ -67,17 +76,164 @@ eleventyNavigation:
           <option value="Audit Support"></option>
         </datalist>
       </label>
+
       <label class="cs-label-message">
         Additional Information
-        <textarea required name="Message" id="message"
+        <textarea required name="message" id="message"
           placeholder="Tell us about your tax situation and any specific questions you have..."></textarea>
       </label>
+
       <button class="cs-button-solid" type="submit">Consult with us</button>
     </form>
+
     <div class="cs-right-section">
-      <!-- Background Image-->
       <img src="/assets/images/tax_preparation_1.png" alt="professional tax preparation services"
         class="cs-contact-image" loading="lazy" />
     </div>
   </div>
+
+  <!-- ===================== Popup ===================== -->
+  <div id="form-popup" class="fp-hidden" role="dialog" aria-modal="true" aria-live="assertive" aria-labelledby="fp-title">
+    <div class="fp-card" id="fp-card" tabindex="-1" role="document">
+      <div class="fp-icon" id="fp-icon" aria-hidden="true">
+        <!-- default icon is success check; JS swaps for error when needed -->
+        <svg viewBox="0 0 24 24" width="28" height="28">
+          <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h3 id="fp-title" class="fp-title">Success</h3>
+      <p id="fp-msg" class="fp-msg">Your message has been sent.</p>
+      <button type="button" class="fp-close" id="fp-close" aria-label="Close">OK</button>
+    </div>
+  </div>
 </section>
+
+<style>
+  /* Popup overlay */
+  #form-popup.fp-hidden { display: none; }
+  #form-popup {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(0,0,0,0.55);
+    display: grid; place-items: center;
+  }
+  /* Card */
+  .fp-card {
+    width: min(92vw, 420px);
+    background: #fff; color: #111;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    padding: 20px 22px;
+    text-align: center;
+    outline: none;
+    animation: fp-pop 160ms ease-out;
+  }
+  @keyframes fp-pop { from { transform: scale(.96); opacity: .6 } to { transform: scale(1); opacity: 1 } }
+
+  .fp-icon {
+    width: 48px; height: 48px; margin: 6px auto 10px;
+    display: grid; place-items: center;
+    border-radius: 50%;
+    color: #fff; background: #16a34a; /* green success */
+  }
+  .fp-card.fp-error .fp-icon { background: #dc2626; } /* red error */
+
+  .fp-title { margin: 8px 0 4px; font-size: 1.15rem; font-weight: 700; }
+  .fp-msg { margin: 0 0 14px; font-size: .98rem; color: #444; }
+  .fp-close {
+    display: inline-block; border: 0; cursor: pointer;
+    background: #111; color: #fff; border-radius: 999px;
+    padding: 10px 16px; font-weight: 600;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('cs-form');                 // your form id
+  const submitBtn = form?.querySelector('button[type="submit"]');  // your button
+
+  const popup   = document.getElementById('form-popup');
+  const card    = document.getElementById('fp-card');
+  const iconEl  = document.getElementById('fp-icon');
+  const titleEl = document.getElementById('fp-title');
+  const msgEl   = document.getElementById('fp-msg');
+  const closeEl = document.getElementById('fp-close');
+
+  function showPopup({ ok = true, title, message }) {
+    if (!popup || !card) return;
+    card.classList.toggle('fp-error', !ok);
+    iconEl.innerHTML = ok
+      ? '<svg viewBox="0 0 24 24" width="28" height="28"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      : '<svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 9v4m0 4h.01M12 3a9 9 0 100 18 9 9 0 000-18z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    titleEl.textContent = title || (ok ? 'Success' : 'Submission failed');
+    msgEl.textContent   = message || (ok ? 'Thanks! Your message was sent.' : 'Please try again in a moment.');
+    popup.classList.remove('fp-hidden');
+    setTimeout(() => card.focus(), 0);
+    if (ok) {
+      clearTimeout(showPopup._t);
+      showPopup._t = setTimeout(hidePopup, 4000);
+    }
+  }
+  function hidePopup(){ popup?.classList.add('fp-hidden'); }
+
+  // expose a quick tester
+  window.testPopup = () => showPopup({ ok:true, title:'Test', message:'Popup works.' });
+
+  // close interactions
+  closeEl?.addEventListener('click', hidePopup);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !popup.classList.contains('fp-hidden')) hidePopup();
+  });
+  popup?.addEventListener('click', (e) => { if (e.target === popup) hidePopup(); });
+  card?.addEventListener('click', (e) => e.stopPropagation());
+
+  if (!form) {
+    console.error('Form #cs-form not found. Ensure the script runs after the form markup.');
+    return;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const hp = form.querySelector('[name="_honeypot"]');
+    if (hp && hp.value) { showPopup({ ok:false, title:'Blocked as spam', message:'Please submit manually.' }); return; }
+    if (!form.reportValidity()) return;
+
+    if (!submitBtn) { console.warn('Submit button not found; continuing.'); }
+    else { submitBtn.disabled = true; var origText = submitBtn.textContent; submitBtn.textContent = 'Sending…'; }
+
+    try {
+      const body = new URLSearchParams(new FormData(form));
+      const res = await fetch(form.action, { method:'POST', body, headers:{ 'Accept':'application/json' } });
+
+      let raw = ''; try { raw = await res.text(); } catch(_) {}
+      let payload = {}; try { payload = raw ? JSON.parse(raw) : {}; } catch(_) {}
+
+      const fsStatus = (res.headers.get('Formspark-Status') || '').toLowerCase();
+      const hasErrors = Boolean(payload.error || payload.errors);
+      const ok = res.ok && !hasErrors && fsStatus !== 'empty';
+
+      if (ok) {
+        form.reset();
+        showPopup({ ok:true, title:'Success', message:'Thanks! Your message was sent.' });
+      } else {
+        let errMsg = '';
+        if (hasErrors) {
+          if (Array.isArray(payload.errors)) errMsg = payload.errors.map(e => e?.message || String(e)).join(', ');
+          else if (payload.error) errMsg = payload.error?.message || String(payload.error);
+        } else if (fsStatus === 'empty') {
+          errMsg = 'Submission was not recorded (check form ID/quota or honeypot).';
+        } else {
+          errMsg = `Server returned ${res.status}.`;
+        }
+        showPopup({ ok:false, title:'Submission failed', message: errMsg || 'Please try again.' });
+      }
+    } catch (err) {
+      showPopup({ ok:false, title:'Network error', message:'Please check your connection and try again.' });
+      console.error(err);
+    } finally {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = origText; }
+    }
+  });
+});
+</script>
+
